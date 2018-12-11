@@ -47,6 +47,9 @@ Information in this database is processed through the following data structures:
   (This dictionary is created and returned with the journalInfo() function)
 
 ## Unit tests
+Unit tests are included to ensure the data tables are being properly created and populated. Tests have also been written to ensure all data is being properly processed prior to sending to plotly for visualizations.
+
+Unit tests can be run by calling `python final_tests.py`
 
 
 ## User Guide
@@ -73,16 +76,16 @@ On the main page, users can switch the view of the pie chart between:
 ### Category Patterns Page
 Here, users can select a specific category from the available drop down menu
 When a user clicks **update**, information for the specified category will load including:
-  **Top published authors**
+  - **Top published authors**
   This is a table of the 5 most published authors in this field along with the number of publications they have in the category
 
-  **Top published affiliated organizations**
+  - **Top published affiliated organizations**
   This is a table of the 5 most published organizations in this field along with the number of publications each organization has in this category
 
-  **Publications over time**
+  - **Publications over time**
   This is a line chart that shows all how many publications were released in this category each year
 
-  **Journals also publish...**
+  - **Journals also publish...**
   This is a horizontal bar graph that shows the top 10 categories of articles that are publishe din Journals of this subject
 
 ### To exit the application
