@@ -1,6 +1,6 @@
-#SI507 Fall 2018 Final Project: Visualizing Research with Science Direct
+# SI507 Fall 2018 Final Project: Visualizing Research with Science Direct
 
-##Data sources
+## Data sources
 3 APIs from Elsevier and Science Direct were used - users can visit the developer portal at https://dev.elsevier.com/ to request an API key
 
 **The APIs used in this project were:**
@@ -16,19 +16,19 @@
   This API requires api key authorization
   This API was used to fetch detailed information for each article identified by the SCOPUS Search API
 
-##Tools
+## Tools
 **Plotly** is used to facilitate the display of graphs on this application, users should set up a plotly account and get an API key. https://plot.ly/python/getting-started/ is a great resource to assist with this process.
 
 **Flask** acts as a local server to host the wep pages displayed by this application
 
-##secrets.py
+## secrets.py
 Users should create a secrets.py file with the following information:
   `sd_key = <science direct api key>
   PLOTLY_USERNAME = <plotly username>
   PLOTLY_API_KEY = <plotly api key>``
 **Users should also make sure their plotly certifications file includes the  proper username and api key**
 
-##Code Structure
+## Code Structure
 Data is gathered using the above mentioned API's - this information is cached in **sciDirect.json** and made available for later access.
 
 This data is used to populate the **sciDirect.db** database. This database includes tables for Articles, Subject Categories, First Authors, Affiliated Organizations, Cities, Countries, Journals and Publication Years.
@@ -46,10 +46,10 @@ Information in this database is processed through the following data structures:
   - **Journal Info Dictionary** this dictionary shows subjects of articles that are often included by journals of a specified subject. The dictionary has up to 10 entries, each with a key of a related subject and a value of the number of articles of the key category published by journals of the previously requested category.
   (This dictionary is created and returned with the journalInfo() function)
 
-##Unit tests
+## Unit tests
 
 
-##User Guide
+## User Guide
 **To delete or rebuild the database:**
 Users can delete, rebuild and populate the database by running the program as
 `python final.py db`
@@ -86,4 +86,4 @@ When a user clicks **update**, information for the specified category will load 
   This is a horizontal bar graph that shows the top 10 categories of articles that are publishe din Journals of this subject
 
 **To exit the application**
-Users can simply quit their web browser and hit control+c on their keyboard to end the Flask hosting session. 
+Users can simply quit their web browser and hit control+c on their keyboard to end the Flask hosting session.
