@@ -50,7 +50,7 @@ Information in this database is processed through the following data structures:
 
 
 ## User Guide
-**To delete or rebuild the database:**
+### To delete or rebuild the database:
 Users can delete, rebuild and populate the database by running the program as
 `python final.py db`
 Here, users will be prompted with information regarding what commands are available: these include:
@@ -60,17 +60,17 @@ Here, users will be prompted with information regarding what commands are availa
   `all` - this will wipe, build and populate the database
   `quit` - allows the user to exit
 
-**To run the program**
+### To run the program
 Users just simply have to enter `python final.py` into the command line, once the program is running, the user should open their preferred browser and type in `localhost:5000` to the address bar. This will pull up the main page of the application.
 
-**Home Page - Article breakdown**
+### Home Page - Article breakdown
 On the main page, users can switch the view of the pie chart between:
   **category view** - will show a breakdown of all of the articles in the database by category. The label of each section is the number of articles in the database from that category. Hovering over a section will provide the name of the category as well as the percentage of the total articles it makes up.  
 
   **country view** -  will show a breakdown of all of the articles in the database by country. The label of each section is the number of articles in the database from that country. Hovering over a section will provide the name of the country as well as the percentage of the total articles it makes up.
   **To aid display - if a country has less than 5 articles in this database, it will be included in the "other" category**
 
-**Category Patterns Page**
+### Category Patterns Page
 Here, users can select a specific category from the available drop down menu
 When a user clicks **update**, information for the specified category will load including:
   **Top published authors**
@@ -85,5 +85,5 @@ When a user clicks **update**, information for the specified category will load 
   **Journals also publish...**
   This is a horizontal bar graph that shows the top 10 categories of articles that are publishe din Journals of this subject
 
-**To exit the application**
+### To exit the application
 Users can simply quit their web browser and hit control+c on their keyboard to end the Flask hosting session.
