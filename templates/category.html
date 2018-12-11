@@ -1,0 +1,57 @@
+<!-- index.html -->
+
+<link rel="stylesheet" href="/static/style.css">
+
+<h3> SI 507 Fall 2018 Final Project </h3>
+<h1> Visualizing Science Direct </h1>
+
+<a href='/'class='button'>Home - Article Overview</a>
+<a href='/category'class='button'>Search Category Patterns</a>
+
+<h2> {{category}} </h2>
+
+<h4> Change category:
+<form action="/category" method="POST">
+  <select name="cat">
+  {% for item in catList %}
+  <option value="{{item}}">{{item}}</option>
+  {% endfor %}
+  </select>
+  <input type="submit" value="Update"/>
+  <br/>
+  <br/>
+</form>
+
+<div class="top5"><h3> Top published authors in {{category}} </h3>
+<table>
+  <tr>
+    <th>Author</th>
+    <th># of Publications</th>
+  {% for x in range(5): %}
+  <tr>
+    <td>{{authList[x]}}</td>
+    <td>{{numList[x]}}</td>
+  </tr>
+  {%endfor%}
+</table>
+
+</div><div class="top5"><h3> Top published affiliated organizations in {{category}} </h3>
+<table>
+  <tr>
+    <th>Organization</th>
+    <th># of Publications</th>
+  {% for x in range(5): %}
+  <tr>
+    <td>{{affList[x]}}</td>
+    <td>{{affnumList[x]}}</td>
+  </tr>
+  {%endfor%}
+</table>
+<br/><br/><br/>
+</div>
+
+<h3>Number of publications in {{category}} per year</h3>
+<div> {{plotly | safe}} </div>
+
+<h3>Journals in this category often publish articles from these categories too </h3>
+<div class = "journals"> {{bubbleplotly | safe }} </div> 

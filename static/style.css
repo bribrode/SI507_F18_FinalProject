@@ -1,0 +1,29 @@
+body{
+  font-family: Helvetica, sans-serif;
+  text-align: center
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    font-size: 12px;
+    padding: 6px;
+    text-decoration: none;
+    color: initial;
+}
+
+table, th, td{
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.journals{
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  width: 75%
+}

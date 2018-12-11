@@ -1,0 +1,25 @@
+<!-- index.html -->
+
+<link rel="stylesheet" href="/static/style.css">
+
+<h3> SI 507 Fall 2018 Final Project </h3>
+<h1> Visualizing Science Direct </h1>
+
+<a href='/'class='button'>Home - Article Overview</a>
+<a href='/category'class='button'>Search Category Patterns</a>
+
+<h2> Article Breakdown by {{sortBy}} </h2>
+
+<form action="/" method="POST">
+    Change article breakdown:<br/>
+    <input type="radio" name="sortby" value="country"/> View by country
+    <input type="radio" name="sortby" value="category"/> View by category <br/>
+
+    <input type="submit" name="update" value="View"/>
+    <br/>
+    <br/>
+</form>
+
+<div> {{plotly | safe}} </div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
